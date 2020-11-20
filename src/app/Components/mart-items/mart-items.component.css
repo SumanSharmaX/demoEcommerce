@@ -1,0 +1,10 @@
+.orignalPrice {
+  text-decoration: line-through;
+}
+.ItemName:hover {
+  text-decoration: none;
+  background-color: black;
+  color: aliceblue;
+  display: flex;
+  text-align: center;
+}
