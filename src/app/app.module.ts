@@ -7,6 +7,7 @@ import { NavBarComponent } from './Components/nav-bar/nav-bar.component';
 import { SideBarComponent } from './Components/side-bar/side-bar.component';
 import { MartItemsComponent } from './Components/mart-items/mart-items.component';
 import { CalDiscountPipe } from './Pipe/cal-discount.pipe';
+import { ItemDetailComponent } from './components/item-detail/item-detail.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { CalDiscountPipe } from './Pipe/cal-discount.pipe';
     NavBarComponent,
     SideBarComponent,
     MartItemsComponent,
-    CalDiscountPipe
+    CalDiscountPipe,
+    ItemDetailComponent
   ],
   imports: [
     BrowserModule,
