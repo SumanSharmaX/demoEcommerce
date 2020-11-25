@@ -7,7 +7,7 @@ import { MartItemsComponent } from './Components/mart-items/mart-items.component
 const routes: Routes = [
   {path:'items',component:MartItemsComponent},
   {path:'itemDetail',component:ItemDetailComponent},
- // {path:'**',component:MartItemsComponent}
+  {path:'**',component:MartItemsComponent}
 ];
 
 @NgModule({
