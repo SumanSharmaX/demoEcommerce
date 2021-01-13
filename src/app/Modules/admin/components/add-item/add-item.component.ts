@@ -3,11 +3,11 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Item } from 'src/app/Models/Item';
 
 @Component({
-  selector: 'app-side-bar',
-  templateUrl: './side-bar.component.html',
-  styleUrls: ['./side-bar.component.css']
+  selector: 'app-add-item',
+  templateUrl: './add-item.component.html',
+  styleUrls: ['./add-item.component.css']
 })
-export class SideBarComponent implements OnInit {
+export class AddITemComponent implements OnInit {
   itemFormGroup:FormGroup;
   @Output() itemEvent=new EventEmitter<Item>();
   constructor(private fb:FormBuilder) { }

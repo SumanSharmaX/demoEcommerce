@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { Item } from 'src/app/Models/Item';
 
 @Component({
-  selector: 'app-mart-items',
-  templateUrl: './mart-items.component.html',
-  styleUrls: ['./mart-items.component.css']
+  selector: 'app-edit-item',
+  templateUrl: './edit-item.component.html',
+  styleUrls: ['./edit-item.component.css']
 })
-export class MartItemsComponent implements OnInit {
+export class EditItemComponent implements OnInit {
+
   items:Item[]=[];
   ngOnInit(): void {
     this.items=[
@@ -21,6 +22,11 @@ export class MartItemsComponent implements OnInit {
       {name: 'Adaptor',price:100,discount:15,description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'},
       {name: 'acer',price:200,discount:25,description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'}
     ]
-  }
- 
+
+}
+addItem(newItem:Item){
+  console.log(newItem);
+  this.items.push(newItem);
+ console.log(this.items);
+}
 }

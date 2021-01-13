@@ -1,32 +1,22 @@
-<div class="container">
-  <div class="row">
-    <div class="col-lg-3">
-      <app-side-bar></app-side-bar>
-    </div>
-    <div class="col-lg-9">
-      <div class="row">
-        <div class="col-lg-4 col-md-6 mb-4" *ngFor="let item of items;index as i">
-          <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a class="ItemName" routerLink="/itemDetail">{{i+1}}.
-                  {{item.name|uppercase}} </a>
-              </h4>
-              <h5 [class.orignalPrice]="item.discount!=0">{{item.price|currency}} <span *ngIf="item.discount!=0"
-                  class="discountedPrice"
-                  class="badge badge-dark ml-3">{{item.price|calDiscount:item.discount|currency }}</span>
-              </h5>
-              <p class="card-text"> {{item.description}}
-              </p>
-            </div>
-            <div class="card-footer">
-              <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-            </div>
-          </div>
-        </div>
+<div class="row">
+  <div class="col-lg-3 col-md-6 mb-4" *ngFor="let item of items;index as i">
+    <div class="card h-100">
+      <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+      <div class="card-body">
+        <h4 class="card-title">
+          <a class="ItemName" routerLink="/itemDetail">{{i+1}}.
+            {{item.name|uppercase}} </a>
+        </h4>
+        <h5 [class.orignalPrice]="item.discount!=0">{{item.price|currency}} <span *ngIf="item.discount!=0"
+            class="discountedPrice" class="badge badge-dark ml-3">{{item.price|calDiscount:item.discount|currency
+            }}</span>
+        </h5>
+        <p class="card-text"> {{item.description}}
+        </p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
       </div>
     </div>
-    <!-- /.row -->
   </div>
 </div>

@@ -1,6 +1,6 @@
-import { MonoTypeOperatorFunction } from 'rxjs';
-
+ 
 export class Item {
+  id?:number;
   name?:string;
   price?:number;
   description?:string;

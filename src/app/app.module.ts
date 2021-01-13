@@ -8,6 +8,9 @@ import { SideBarComponent } from './Components/side-bar/side-bar.component';
 import { MartItemsComponent } from './Components/mart-items/mart-items.component';
 import { CalDiscountPipe } from './Pipe/cal-discount.pipe';
 import { ItemDetailComponent } from './components/item-detail/item-detail.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+ 
+
 
 @NgModule({
   declarations: [
@@ -16,11 +19,14 @@ import { ItemDetailComponent } from './components/item-detail/item-detail.compon
     SideBarComponent,
     MartItemsComponent,
     CalDiscountPipe,
-    ItemDetailComponent
+    ItemDetailComponent,
+ 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

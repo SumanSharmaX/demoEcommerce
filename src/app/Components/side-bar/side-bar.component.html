@@ -7,4 +7,60 @@
   <a href="#" class="list-group-item">Category 1</a>
   <a href="#" class="list-group-item">Category 2</a>
   <a href="#" class="list-group-item">Category 3</a>
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-danger mt-4" data-toggle="modal" data-target="#exampleModalCenter">
+    Add New Brand
+  </button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">ADD new Brand</h5>
+
+        </div>
+        <div class="modal-body">
+          <form [formGroup]="itemFormGroup">
+            <label for="NameInput">Name OF Brand</label>
+            <input type="text" class="form-control" placeholder="Name " formControlName="Name">
+            <div *ngIf="itemFormGroup.get('Name').touched">
+              <div class="alert alert-danger" *ngIf="itemFormGroup.get('Name').errors?.required">Name of brand is
+                required</div>
+              <div class="alert alert-danger" *ngIf="itemFormGroup.get('Name').errors?.minlength">length of brand Name
+                must be greater then 2
+                digits</div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <label for="NameInput">Price</label>
+                <input type="Number" class="form-control" placeholder="Price" formControlName="Price">
+                <div *ngIf="itemFormGroup.get('Price').touched">
+                  <div class="alert alert-danger" *ngIf="itemFormGroup.get('Price').errors?.required">Price is
+                    required</div>
+                </div>
+              </div>
+              <div class="col-6">
+                <label for="formGroupExampleInput">Discount</label>
+                <input type="number" class="form-control" placeholder="discount" formControlName="Discount">
+                <div *ngIf="itemFormGroup.get('Discount').touched">
+                  <div class="alert alert-danger" *ngIf="itemFormGroup.get('Discount').errors?.required">Discount is
+                    required</div>
+                </div>
+              </div>
+
+            </div>
+            <label for="DescriptionInput">Description</label>
+            <textarea name="description" id="item-description" rows="3" cols="62"
+              formControlName="Description"></textarea>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" (click)="Update()">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
